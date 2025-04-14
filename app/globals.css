@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 250 99% 69%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 91% 71%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 196 100% 50%;
+    --radius: 0.5rem;
+    --chart-1: 196 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 250 99% 69%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 91% 71%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 196 100% 50%;
+    --chart-1: 196 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Text gradients */
+  .text-gradient-cyan-purple {
+    @apply bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-transparent;
+  }
+
+  .text-gradient-purple-pink {
+    @apply bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent;
+  }
+
+  .text-gradient-blue-cyan {
+    @apply bg-gradient-to-r from-neon-blue via-neon-cyan to-neon-green bg-clip-text text-transparent;
+  }
+
+  .text-gradient-rainbow {
+    @apply bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink bg-clip-text text-transparent;
+  }
+
+  /* Background gradients */
+  .bg-gradient-cyan-purple {
+    @apply bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple;
+  }
+
+  .bg-gradient-purple-pink {
+    @apply bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue;
+  }
+
+  .bg-gradient-blue-cyan {
+    @apply bg-gradient-to-r from-neon-blue via-neon-cyan to-neon-green;
+  }
+
+  .bg-gradient-rainbow {
+    @apply bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink;
+  }
+
+  /* Card styles */
+  .neon-card {
+    @apply bg-black/60 backdrop-blur-md border-2 shadow-xl relative overflow-hidden;
+  }
+
+  .neon-card-cyan {
+    @apply neon-card border-neon-cyan/50 shadow-[0_0_15px_rgba(0,255,255,0.3)];
+  }
+
+  .neon-card-purple {
+    @apply neon-card border-neon-purple/50 shadow-[0_0_15px_rgba(208,0,255,0.3)];
+  }
+
+  .neon-card-pink {
+    @apply neon-card border-neon-pink/50 shadow-[0_0_15px_rgba(255,0,255,0.3)];
+  }
+
+  .neon-card-blue {
+    @apply neon-card border-neon-blue/50 shadow-[0_0_15px_rgba(0,191,255,0.3)];
+  }
+
+  .neon-card-green {
+    @apply neon-card border-neon-green/50 shadow-[0_0_15px_rgba(0,255,157,0.3)];
+  }
+
+  .neon-card-rainbow {
+    @apply neon-card border-transparent animate-border-flow;
+  }
+
+  /* Text shadows */
+  .text-shadow-sm {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.2);
+  }
+
+  .text-shadow-xl {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.2), 0 0
+      40px rgba(0, 255, 255, 0.1);
+  }
+
+  .text-shadow-cyan {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  }
+
+  .text-shadow-purple {
+    text-shadow: 0 0 10px rgba(208, 0, 255, 0.7);
+  }
+
+  .text-shadow-pink {
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+  }
+
+  .text-shadow-blue {
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+  }
+
+  .text-shadow-0 {
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+  }
+}
+
+.text-shadow-blue {
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+}
+
+.text-shadow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.7);
+}
+
+/* Animations */
+.animate-shimmer {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Background patterns */
+.cyber-grid {
+  background-size: 30px 30px;
+  background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(208, 0, 255, 0.1) 1px, transparent 1px);
+}
+
+.neon-dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(0, 255, 255, 0.2) 1px, transparent 1px);
+}
+
+/* Skill bars */
+.skill-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px 5px rgba(208, 0, 255, 0.3);
+}
+
+.glow-pink {
+  box-shadow: 0 0 15px 5px rgba(255, 0, 255, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px 5px rgba(0, 191, 255, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px 5px rgba(0, 255, 157, 0.3);
+}
+
+.glow-pulse {
+  animation: glow-pulse 8s linear infinite;
+}
+
+/* 3D effects */
+.perspective {
+  perspective: 1000px;
+}
+
+.rotate-y {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.rotate-y:hover {
+  transform: rotateY(10deg);
+}
+
+.rotate-x {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.rotate-x:hover {
+  transform: rotateX(10deg);
+}
+
+/* Utility classes */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Additional animations */
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
