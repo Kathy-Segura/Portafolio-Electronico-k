@@ -159,7 +159,7 @@ export default function Hero() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-2 tracking-tight">
               <span className="block text-white">{t("hero.greeting")}</span>
-              <span className="block mt-2 text-gradient-rainbow text-shadow-lg">Tu Nombre</span>
+              <span className="block mt-2 text-gradient-rainbow text-shadow-lg">Katherine Segura S</span>
             </h1>
           </motion.div>
 

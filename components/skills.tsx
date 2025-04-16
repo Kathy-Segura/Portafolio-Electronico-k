@@ -97,7 +97,7 @@ export default function Skills() {
       description: "Diseño y gestión de bases de datos relacionales y no relacionales para almacenamiento eficiente.",
       color: "neon-pink",
     },
-    {
+    /*{
       name: "Desarrollo Web",
       level: 80,
       icon: <Globe className="text-neon-blue" size={24} />,
@@ -120,7 +120,7 @@ export default function Skills() {
       technologies: ["Git", "CI/CD", "Docker", "AWS"],
       description: "Automatización de procesos de desarrollo, pruebas y despliegue de aplicaciones.",
       color: "neon-cyan",
-    },
+    },*/
   ]
 
   const containerVariants = {

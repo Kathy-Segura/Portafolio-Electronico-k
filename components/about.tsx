@@ -74,7 +74,7 @@ export default function About() {
                     {/* Bio text */}
                     <div>
                       <h3 className="text-2xl font-bold mb-4 text-gradient-cyan-purple">
-                        <span className="text-white">Hola, soy </span>Tu Nombre
+                        <span className="text-white">Hola, soy </span>Katherine Sofia Segura S.
                       </h3>
                       <p className="text-white/90 leading-relaxed">{t("about.description")}</p>
                     </div>
@@ -84,7 +84,7 @@ export default function About() {
                       <InfoCard
                         icon={<User className="text-neon-cyan" size={20} />}
                         label={t("about.card.name")}
-                        value="Tu Nombre"
+                        value="Katherine"
                         color="cyan"
                       />
 
@@ -98,7 +98,7 @@ export default function About() {
                       <InfoCard
                         icon={<MapPin className="text-neon-pink" size={20} />}
                         label={t("about.card.location")}
-                        value="Tu Ciudad"
+                        value="Managua"
                         color="pink"
                       />
 

@@ -60,30 +60,30 @@ export default function Contact() {
     {
       icon: <Mail className="text-neon-cyan" size={24} />,
       title: "Email",
-      value: "tu.email@ejemplo.com",
+      value: "katysofia777@outlook.com",
       color: "neon-cyan",
-      link: "mailto:tu.email@ejemplo.com",
+      link: "mailto:katysofia777@outlook.com",
     },
     {
       icon: <Phone className="text-neon-purple" size={24} />,
       title: "Teléfono",
-      value: "+XX XXX XXX XXX",
+      value: "+505 8938-4376",
       color: "neon-purple",
-      link: "tel:+XXXXXXXXXXXX",
+      link: "tel:+505 8938-4376",
     },
     {
       icon: <MapPin className="text-neon-pink" size={24} />,
       title: "Ubicación",
-      value: "Ciudad, País",
+      value: "Managua, Nicaragua",
       color: "neon-pink",
-      link: "https://maps.google.com",
+      link: "https://www.google.com/maps/place/Managua",
     },
   ]
 
   const socialLinks = [
     {
       icon: <Github size={20} />,
-      url: "#",
+      url: "https://github.com/Kathy-Segura",
       color: "from-zinc-700 to-zinc-900",
       borderColor: "border-neon-cyan",
       glowColor: "shadow-[0_0_10px_rgba(0,255,255,0.3)]",
@@ -91,7 +91,7 @@ export default function Contact() {
     },
     {
       icon: <Linkedin size={20} />,
-      url: "#",
+      url: "https://www.linkedin.com/in/katherine-s-segura-8050aa329/",
       color: "from-blue-700 to-blue-900",
       borderColor: "border-neon-purple",
       glowColor: "shadow-[0_0_10px_rgba(208,0,255,0.3)]",
